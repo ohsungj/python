@@ -1,0 +1,79 @@
+#문제1 : 나이에 따른 올바른 말이 나오도록 해주세요.(개념 : 조건문, if문)
+#if 조건문에 세미콜론;이 아닌 콜론:
+#실행문 입력시 들여쓰기(tab)
+age=20
+if age<=19 :
+  print("미성년입니다")
+if age>=20 :
+  print("성년입니다")
+
+
+# 문제 : 10대, 20대, 30대 중 나이에 맞는 변수를 출력해주세요.
+
+age = 15 # 25로 바꿔서 실행해보세요. 15로도 바꿔서 실행해보세요.
+if age>=10 and age<20 :
+  print("10대")
+if age>=20 and age<30 :
+  print("20대")
+if age>=30 and age<40 :
+  print("30대")
+
+#문제:90점이상 출석율80이상 A 80점이상 B 70점이상 C 60점이상 D 그외 F를 주는 프로그램
+#따옴표 주의
+score =70
+attendance_rate=80
+
+if score>=90 and attendance_rate>=80:
+  grade='A'
+elif score>=80:
+  grade='B'
+elif score>=70:
+  grade='C'
+elif score>=60:
+  grade='D'
+else:
+  grade='F'
+
+
+print("내성적:",grade)
+
+# 문제 : 구구단 8단을 출력해주세요.
+# 조건 : for, while문을 사용할 수 없습니다.
+# 변수의 재활용 
+
+s = ""
+s = s + "8 * 1 = 8"
+s = s + "\n8 * 2 = 16"
+s = s + "\n8 * 3 = 24"
+s = s + "\n8 * 4 = 32"
+s = s + "\n8 * 5 = 40"
+s = s + "\n8 * 6 = 48"
+s = s + "\n8 * 7 = 56"
+s = s + "\n8 * 8 = 64"
+s = s + "\n8 * 9 = 72"
+
+
+print(s)
+
+
+# 문제 : 구구단 8단을 출력해주세요.
+# 조건 : 숫자 1 이외의 값을 사용할 수 없습니다. 소스코드를 수정해주세요.
+# 조건 : while문을 사용해주세요.
+# while 조건부문에 콜론 주의
+# while 밑 실행문부터 들여쓰기 주의
+
+
+dan = 7
+dan = dan + 1
+
+# 수정가능 시작
+
+i = 1
+while i <= 9:
+  print("{} * {} = {}".format(dan, i, dan * i))
+  i += 1
+
+
+
+
+# 수정가능 끝
