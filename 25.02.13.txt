@@ -1,0 +1,116 @@
+#문제 : 입력받은 정수가 100보다 큰지 알려주는 함수 구현
+def is_bigger_than_100(n):
+  if n>100:
+    return True
+  else:
+    return False
+print("128은(는) 100보다 큽니다. : {}\n".format(is_bigger_than_100(128)));
+
+
+# 문제 : 입력받은 정수의 모든 약수의 합을 리턴하는 함수를 구현해주세요.
+
+def get_divisors_sum(num):
+  s = 0
+  i = 1
+  while i <= num :
+    if num % i == 0: 
+      s += i
+    i += 1
+  return s
+  ''' 구현 '''
+
+ 
+
+s = get_divisors_sum(1000)
+
+print("정수 1000의 약수의 합 : {}".format(s))
+
+# 출력 => 정수 1000의 약수의 합 : 2340
+
+
+# 문제 - 입력받은 정수가 소수인지 아닌지 알려주는 함수를 구현해주세요.(개념 : 함수, 반복문, 리턴)
+def is_prime_number(n):
+  if n <= 1:
+    return False
+  i=2
+  s=0
+  while i < n:
+    if n % i == 0:
+      return False
+    i+=1
+  return True
+
+
+print("3은 소수입니다 : {}".format(is_prime_number(3)))
+
+
+# 문제 : 1부터 n 사이의 수 중에서 소수의 개수 반환하는 함수 `get_1_to_n_prime_numbers_count` 를 구현해주세요.
+def is_prime_number(num): # 소수판별기
+  if num == 1:
+    return False
+  i = 2
+  while i < num : # 2부터 num까지의 수 중에서 num을 나누어 떨어지면 소수가 아니다.
+    if num % i == 0:
+      return False
+    i += 1
+
+  return True # 위에서 모두 만족하지 않았다면 소수다.
+#1부터 n 사이의 수 중에서 소수의 개수 반환하는 함수
+def get_1_to_n_prime_numbers_count(n):
+  #여기서 구현해주세요.
+  count = 0
+  i = 1
+  while i <= n:
+    if is_prime_number(i):
+     count += 1
+    i += 1
+  return count
+
+number = 1000
+count = get_1_to_n_prime_numbers_count(number)
+print("1부터 {}사이에 존재하는 소수의 개수 : {}개\n".format(number, count))
+  # 출력 => 1부터 1000사이에 존재하는 소수의 개수 : 168개
+
+number = 2000
+count = get_1_to_n_prime_numbers_count(number)
+print("1부터 {}사이에 존재하는 소수의 개수 : {}개\n".format(number, count))
+  # 출력 => 1부터 2000사이에 존재하는 소수의 개수 : 303개
+
+
+# 문제 : 1부터 n 사이의 수 중에서 소수의 합을 반환하는 함수 `get_1_to_n_prime_numbers_sum` 를 구현해주세요.
+def is_prime_number(num): # 소수판별기
+  if num == 1:
+    return False
+  i = 2
+  while i < num : # 2부터 num까지의 수 중에서 num을 나누어 떨어지면 소수가 아니다.
+    if num % i == 0:
+      return False
+    i += 1
+
+  return True # 위에서 모두 만족하지 않았다면 소수다.
+
+# 1부터 n 사이의 수 중에서 소수의 합 반환하는 함수
+def get_1_to_n_prime_numbers_sum(n):
+  # 구현
+  sum = 0 
+  i = 1
+  while i <= n:
+    if is_prime_number(i):
+     sum += i
+    i += 1
+  return sum
+
+
+
+
+
+number = 1000
+sum = get_1_to_n_prime_numbers_sum(number)
+print("1부터 {}사이에 존재하는 소수의 개수 : {}개\n".format(number, sum))
+  # 출력 => 1부터 1000사이에 존재하는 소수의 합 : 76127
+
+number = 2000
+sum = get_1_to_n_prime_numbers_sum(number)
+print("1부터 {}사이에 존재하는 소수의 개수 : {}개\n".format(number, sum))
+ # 출력 => 1부터 2000사이에 존재하는 소수의 합 : 277050
+
